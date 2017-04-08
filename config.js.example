@@ -1,0 +1,5 @@
+module.exports = {
+  'url':'ws://localhost:5672', // GPMDP default websocket url
+  'appname':'goom-cli',
+  'secret':'your-secret-key-here'
+};

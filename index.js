@@ -1,15 +1,14 @@
 #!/usr/bin/env node
-'use strict';
 
 const program = require('commander');
 const WebSocket = require('ws');
 const chalk = require('chalk');
 
-const url = 'ws://localhost:5672'
-const ws = new WebSocket(url);
+var config = require('./config.js');
 
-const appname = 'goom-cli'
-const secret = 'a4459902-f302-4054-8ccf-94e6ed83ae9a'
+const ws = new WebSocket(config.url);
+
+
 
 // single function - send both namespace and method as a result of option
 // incorporate ES6 literals for secret
